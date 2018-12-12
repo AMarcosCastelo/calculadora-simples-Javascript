@@ -171,7 +171,7 @@ class Calculator {
 
         try {
 
-            return eval(this._operation.join('')).toPrecision(11);
+            return eval(this._operation.join(''));
 
         } catch(e) {
 
@@ -405,12 +405,6 @@ class Calculator {
 
                 let textBtn = btn.id.replace('btn-', '');
                 this.execBtn(textBtn);
-
-            });
-
-            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e => {
-
-                btn.style.cursor = 'pointer';
 
             });
 
